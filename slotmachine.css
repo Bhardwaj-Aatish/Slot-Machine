@@ -1,0 +1,77 @@
+:root{
+    --speed:2;
+    --duration:0;
+
+}
+.machine{
+    background-color: rgb(193, 43, 223);
+    border: 2px solid black;
+    height:300px;
+    width: 900px;
+    margin: 50px;
+    display: flex;
+    z-index: 5;
+
+}
+#inputspeed{
+    font-size: 30pt;
+    margin-left: 350px;
+    width: 70px;
+}
+#spin{
+    font-size:30pt;
+    margin-left: 250px;
+    width:100px;
+    border: 4px solid black;
+    border-radius: 10px;
+    /* background-color: crimson; */
+}
+#spin:hover{
+    /* background-color: darkgoldenrod; */
+    border-radius: 10px;
+}
+button:focus{
+    outline:none !important;
+    /* if we select the button then the border which i am giving is gone and view as square box without any border radius  */
+    /* so i have use the upper line taaki border radius as it is rahe  */
+    background-color: greenyellow;
+    }
+.slot{
+    height: 250px;
+    width: 250px;
+    margin:20px;
+    background-color: rgb(67, 153, 211);
+    border:solid darkblue;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* border: 2x solid rgb(255, 254, 254); */
+    /* align-items: center; */
+    text-align:center;
+    line-height: 250px;
+    font-size: 100px;  
+    z-index: 1;
+    overflow: hidden;
+}
+.slot > .value{
+    z-index:3;
+    /* display: inline-block; */
+    /* animation: slotspin infinite  0.5s; */
+    /* animation-name:slotspin;
+    animation-iteration-count: infinte;
+    animation-duration : calc(1s / var(--speed)); */
+     /* animation: slotspin   (var(--duration))  calc(1s / var(--speed)); */
+     
+    /* animation-name: slotspin;
+    animation-iteration-count: infinite;
+    animation-duration:calc(1s / var(--speed)); */
+    /* animation-play-state: paused; */
+   
+}
+@keyframes slotspin{
+    0%{
+        transform:translateY(-220px);
+    }
+    100%{
+        transform: translateY(220px);
+    }
+}
